@@ -39,11 +39,10 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :tapuma, Tapuma.Repo,
   adapter: MssqlEcto,
-  database: "sql_server_db",
+  database: "Project",
   username: "sa",
-  password: "Androide71_",
-  hostname: "localhost",
+  password: "Fingerstyle1",
+  hostname: "192.168.122.1",
   instance_name: "MSSQLSERVER",
   port: "1433",
-  pool_size:     10,
-  odbc_driver:   "{ODBC Driver 17 for SQL Server}"
+  pool_size:     10

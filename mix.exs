@@ -39,6 +39,7 @@ defmodule Tapuma.Mixfile do
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
+      {:plug_cowboy, "~> 1.0"},
       {:mssql_ecto, "~> 1.2.0"},
       {:mssqlex, "~> 1.1.0"}
     ]
