@@ -8,5 +8,6 @@ defmodule TapumaWeb.Router do
   scope "/api", TapumaWeb do
     pipe_through :api
     resources "/car", CarController, except: [:new, :edit]
+    resources "/police", PoliceController, except: [:new, :edit]
   end
 end
