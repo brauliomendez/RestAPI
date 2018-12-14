@@ -6,5 +6,4 @@ defmodule Tapuma.Drivers.Driver do
     field :driver_license, :integer
     has_one :people, Tapuma.Users.People, foreign_key: :people_id
   end
-
 end

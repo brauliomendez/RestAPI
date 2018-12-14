@@ -12,5 +12,7 @@ defmodule TapumaWeb.Router do
     resources "/drivers", DriverController, except: [:new, :edit]
 
     resources "/owners", OwnerController, except: [:new, :edit]
+
+    resources "/passengers", PassengerController, except: [:new, :edit]
   end
 end
