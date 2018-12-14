@@ -23,6 +23,7 @@ defmodule TapumaWeb.CarView do
       passenger: car.passenger,
       capacity_tank: car.capacity_tank,
       id_owner: car.id_owner,
-      id_driver: car.id_driver}
+      id_driver: car.id_driver,
+      penalties: render_many(car.penalties, TapumaWeb.PenaltyView, "travel.json")}
   end
 end

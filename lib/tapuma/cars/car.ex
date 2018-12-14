@@ -15,6 +15,8 @@ defmodule Tapuma.Cars.Car do
     field :model, :string
     field :passenger, :integer
     field :year, :integer
+
+    has_many :penalties, Tapuma.Penalties.Penalty, foreign_key: :economic_number
   end
 
 end

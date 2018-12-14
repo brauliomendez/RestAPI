@@ -18,7 +18,7 @@ defmodule Tapuma.Cars do
 
   """
   def list_cars do
-    Repo.all(Car)
+    Repo.all(from(d in Tapuma.Cars.Car, preload: [:penalties]))
   end
 
   @doc """
@@ -35,7 +35,7 @@ defmodule Tapuma.Cars do
       ** (Ecto.NoResultsError)
 
   """
-  def get_car!(id), do: Repo.get!(Car, id)
+  def get_car!(id), do: from(d in Tapuma.Cars.Car, preload: [:penalties]) |> Repo.get!(id)
 
   @doc """
   Creates a car.
