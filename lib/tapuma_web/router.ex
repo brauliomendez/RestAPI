@@ -16,5 +16,7 @@ defmodule TapumaWeb.Router do
     resources "/passengers", PassengerController, except: [:new, :edit]
 
     resources "/cops", CopController, except: [:new, :edit]
+
+    resources "/travels", TravelController, except: [:new, :edit]
   end
 end

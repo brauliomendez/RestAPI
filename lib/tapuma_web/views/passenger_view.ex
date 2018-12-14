@@ -16,6 +16,7 @@ defmodule TapumaWeb.PassengerView do
       school: passenger.school,
       entry_hour: passenger.entry_hour,
       exit_hour: passenger.exit_hour,
-      profile: render_one(passenger.people, TapumaWeb.PeopleView, "people.json")}
+      profile: render_one(passenger.people, TapumaWeb.PeopleView, "people.json"),
+      travels: render_many(passenger.travels, TapumaWeb.TravelView, "travel.json")}
   end
 end

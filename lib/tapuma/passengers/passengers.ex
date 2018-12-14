@@ -18,7 +18,7 @@ defmodule Tapuma.Passengers do
 
   """
   def list_passengers do
-    Repo.all(from(d in Tapuma.Passengers.Passenger, preload: [:people]) )
+    Repo.all(from(d in Tapuma.Passengers.Passenger, preload: [:people], preload: [:travels]) )
   end
 
   @doc """
@@ -35,7 +35,7 @@ defmodule Tapuma.Passengers do
       ** (Ecto.NoResultsError)
 
   """
-  def get_passenger!(id), do: from(d in Tapuma.Passengers.Passenger, preload: [:people]) |> Repo.get!(id)
+  def get_passenger!(id), do: from(d in Tapuma.Passengers.Passenger, preload: [:people],  preload: [:travels]) |> Repo.get!(id)
 
   @doc """
   Creates a passenger.
