@@ -14,6 +14,7 @@ defmodule TapumaWeb.OwnerView do
     IO.inspect owner
     %{id_owner: owner.id_owner,
       rfc: owner.rfc,
-      profile: render_one(owner.people, TapumaWeb.PeopleView,"people.json")}
+      profile: render_one(owner.people, TapumaWeb.PeopleView,"people.json"),
+      cars: render_many(owner.cars, TapumaWeb.CarView, "car.json")}
   end
 end

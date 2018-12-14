@@ -18,7 +18,7 @@ defmodule Tapuma.Drivers do
 
   """
   def list_drivers do
-   Repo.all(from(d in Tapuma.Drivers.Driver, preload: [:people]) )
+   Repo.all(from(d in Tapuma.Drivers.Driver, preload: [:people], preload: [:cars]))
   end
 
   @doc """
@@ -35,7 +35,7 @@ defmodule Tapuma.Drivers do
       ** (Ecto.NoResultsError)
 
   """
-  def get_driver!(id), do: from(d in Tapuma.Drivers.Driver, preload: [:people]) |> Repo.get!(id)
+  def get_driver!(id), do: from(d in Tapuma.Drivers.Driver, preload: [:people], preload: [:cars]) |> Repo.get!(id)
 
   @doc """
   Creates a driver.

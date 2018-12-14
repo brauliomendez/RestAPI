@@ -18,7 +18,7 @@ defmodule Tapuma.Owners do
 
   """
   def list_owners do
-    Repo.all(from(d in Tapuma.Owners.Owner, preload: [:people]))
+    Repo.all(from(d in Tapuma.Owners.Owner, preload: [:people], preload: [:cars]))
   end
 
   @doc """
@@ -35,7 +35,7 @@ defmodule Tapuma.Owners do
       ** (Ecto.NoResultsError)
 
   """
-  def get_owner!(id), do: from(d in Tapuma.Owners.Owner, preload: [:people]) |> Repo.get!(id)
+  def get_owner!(id), do: from(d in Tapuma.Owners.Owner, preload: [:people], preload: [:cars]) |> Repo.get!(id)
 
   @doc """
   Creates a owner.
