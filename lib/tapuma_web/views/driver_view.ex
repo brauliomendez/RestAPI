@@ -16,5 +16,4 @@ defmodule TapumaWeb.DriverView do
       driver_license: driver_license,
       profile: render_one(people, TapumaWeb.PeopleView,"people.json")}
   end
-
 end

@@ -11,8 +11,7 @@ defmodule TapumaWeb.PeopleView do
   end
 
   def render("people.json", %{people: people}) do
-    %{
-      people_id: people.people_id,
+    %{people_id: people.people_id,
       first_name: people.first_name,
       last_name: people.last_name,
       city: people.city,
