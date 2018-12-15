@@ -24,6 +24,6 @@ defmodule TapumaWeb.CarView do
       capacity_tank: car.capacity_tank,
       id_owner: car.id_owner,
       id_driver: car.id_driver,
-      penalties: render_many(car.penalties, TapumaWeb.PenaltyView, "travel.json")}
+      penalties: render_many(car.penalties, TapumaWeb.PenaltyView, "penalty.json")}
   end
 end
